@@ -4,7 +4,7 @@ More robust checks can be added in the future and the different parameters invol
 A final probability sum is calculated by adding each of the error probabilities from each check. 
 Depending on the final probability value the image with its current annotations is classified into three categories  - All Good (if everything seems ok), Warning (if there could be an error), Error (if there is has high chance of error). Finally for each image the error classifications and final probability values are stored in a csv file 
 
-# # # Please add your image urls and keys as dummy values have been used in this code
+### Please add your image urls and keys as dummy values have been used in this code
 
 # Results Output on Terminal
 ![image](https://github.com/user-attachments/assets/cabf0dbe-4873-47c4-8da8-d3563e7ffe85)
