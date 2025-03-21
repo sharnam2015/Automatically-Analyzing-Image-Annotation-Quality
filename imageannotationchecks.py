@@ -7,8 +7,6 @@ import math
 import numpy as np
 import csv
 
-#LLMs have been used to help get this code running faster
-
 def check_bounding_box_size(image, annotations_by_uuid):
     """
     Checks whether the bounding box for each annotation exceeds 20% of the total image area.
@@ -90,7 +88,7 @@ def check_iou_annotations(img_cv, annotations_by_uuid, threshold=0.7):
     Returns:
       A probability of error , PIOU value
     """
-    # (Optional) Get image dimensions from img_cv.
+    # Get image dimensions from img_cv.
     # For a color image, shape is (height, width, channels)
     height, width, _ = img_cv.shape
     print(f"Image dimensions: width={width}, height={height}")
@@ -114,7 +112,7 @@ def check_iou_annotations(img_cv, annotations_by_uuid, threshold=0.7):
 
 
 def check_color_consistency(img_cv, annotations_by_uuid):
-    # Define background color options in BGR (OpenCV default)
+    # Define background color options in BGR 
     color_options = {
         "white":  (255, 255, 255),
         "yellow": (0, 255, 255),
