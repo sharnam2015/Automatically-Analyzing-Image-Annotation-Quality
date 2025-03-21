@@ -6,6 +6,7 @@ Depending on the final probability value the image with its current annotations 
 
 ### Please add your image urls and keys to the .py file as dummy values have been used in this code
 ### To run the code, after adding the urls and keys just type python image annotationchecks.py on a code editor that supports python and has the various python dependencies and modules installed 
+### In case you find this repository useful please star it and in case you want to discuss any improvements or so to this code please let me know
 
 # Results Output on Terminal
 ![image](https://github.com/user-attachments/assets/cabf0dbe-4873-47c4-8da8-d3563e7ffe85)
