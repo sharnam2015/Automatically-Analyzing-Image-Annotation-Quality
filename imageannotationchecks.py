@@ -22,13 +22,11 @@ def check_bounding_box_size(image, annotations_by_uuid):
         probability of error value
         
     """
-    # Download the image
-    #response = requests.get(image_url)
-    #image = Image.open(BytesIO(response.content))
+
     image_height, image_width, _ = image.shape
     image_area = image_width * image_height
     psum = 0.0
-    #results = {}
+    
     for uuid, annotation in annotations_by_uuid.items():
         bbox_width = annotation.get("width", 0)
         bbox_height = annotation.get("height", 0)
@@ -38,7 +36,6 @@ def check_bounding_box_size(image, annotations_by_uuid):
         fraction = bbox_area / image_area
         if fraction > 0.20:
             psum+=0.2 #assigning 0.1 fraction per boundix box greater than 0.2
-        #results[uuid] = fraction > 0.20
 
     return psum
 
@@ -250,7 +247,7 @@ def check_line_alignment(img_cv, annotations_by_uuid, threshold=15):
 
     
 if __name__ == "__main__":
-    
+    #dummy urls are used below
     task_urls = [
         "url1",
         "url2",
@@ -264,7 +261,7 @@ if __name__ == "__main__":
 
     headers = {"Accept": "application/json"}
         
-    auth = HTTPBasicAuth('Key', '') # No password
+    auth = HTTPBasicAuth('Key', '') # fill key and password as needed
     with open("output.csv", "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
         # Write header row
